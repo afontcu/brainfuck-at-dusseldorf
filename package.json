@@ -4,9 +4,10 @@
   "description": "Deck created with mdx-deck",
   "scripts": {
     "start": "mdx-deck deck.mdx",
-    "build": "mdx-deck build deck.mdx",
+    "build": "npm run static && mdx-deck build deck.mdx -d public/",
     "pdf": "mdx-deck pdf deck.mdx",
     "image": "mdx-deck screenshot deck.mdx",
+    "static": "mkdir -p public/images/ && cp -R images/ public/",
     "help": "mdx-deck"
   },
   "keywords": [],
