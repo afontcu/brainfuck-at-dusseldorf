@@ -1,38 +1,12 @@
+# Brainfuck @ Düsseldorf
 
-# mdx-deck basic template
+The proper explanation of what happened here is in this blog post:
 
-This was generated with [mdx-deck][]'s `npm init deck` command.
+https://calidae.blog/did-i-spend-a-whole-week-in-trivago-learning-javascript-from-kyle-simpson-8fb8a204fa16
 
-## Development
+This repo is just the talk I gave in my company to explain my adventure @ 
+Trivago Headquarters during the first week of August, 2018. It's not serious,
+it's written in Catalan, and I prepared the talk in ~8 mins.
 
-To run the presentation deck in development mode:
+By the way, slides are available here, because potatoes:
 
-```sh
-npm start
-```
-
-Edit the [`deck.mdx`](deck.mdx) file to get started.
-
-## Exporting
-
-To build the presentation deck as static HTML:
-
-```sh
-npm run build
-```
-
-To export a PDF:
-
-```sh
-npm run pdf
-```
-
-To export an image of the title slide:
-
-```sh
-npm run image
-```
-
-For more documentation see the [mdx-deck][] repo.
-
-[mdx-deck]: https://github.com/jxnblk/mdx-deck
