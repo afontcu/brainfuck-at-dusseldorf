@@ -373,39 +373,136 @@ Indirect inputs and outputs are called "side-effects".
 
 The rule is not "No side-effects".
 The rule is "Avoid side-effects wherever possible"
-
-
 ```
----
-
-## point-free style
 
 ---
 
 ```js
-function bar(x) {
-  console.log(x)
+function sum (x, y) {
+  return function () {  // <--
+    return x + y
+  }
 }
-
-foo(v => bar(v))  // both
-foo(bar)          // are equivalent
-```
-
----
-
-oju!
-
-```js
-['1', '2', '3'].map(parseInt)
 ```
 
 ```notes
-[1, NaN, NaN]
-
-parseInt(string, radix)
-
-map(element, index, arr)
+foo() is lazy. Computating doesn't occur until you execute it:
 ```
+
+---
+
+```js
+var x = sum(3,4)
+x()  // computation happens here
+x()  // ...but also here!
+```
+
+---
+
+```js
+function sum (x, y) {
+  var total = x + y  // "work" is done here
+  return function () {
+    return total
+  }
+}
+```
+
+```notes
+Només hi ha 2 línies on podria reassignar "sum". I les podem veure. I veiem
+que no hi ha cap reassignament.
+
+"High degree of confidence" que, en aquest context, cridar sum(3,4) dues vegades
+donaria el mateix resultat.
+```
+
+---
+
+eager vs. lazy
+
+```notes
+Tradeoffs. Potentially unnecessary work vs. Duplicate work.
+```
+
+---
+
+fer la feina una sola vegada, però no fer-la fins que sigui necessari.
+
+---
+
+```js
+function sum (x, y) {
+  var total
+
+  return function () {
+    if (total === undefined) {
+      total = x + y
+    }
+    return total
+  }
+}
+```
+
+```notes
+(memoization)
+
+is this still a pure function? now we are closed over a variable that absolutely
+changes.
+
+here we made a tradeoff.
+
+more performance. less degree of confidence a reader can get.
+```
+
+---
+
+```js
+function sum (x, y) {
+  return memoize(function () {
+    return x + y
+  })
+}
+```
+
+```notes
+Tradeoffs.
+```
+
+---
+
+# Referential Transparency
+
+---
+
+export default Invert
+
+<Image src="images/wat.jpg" size="contain" />
+
+---
+
+```js
+function sum (x, y) {
+  return x + y
+}
+```
+```js
+sum(3,4)
+```
+
+---
+
+```js
+function sum (x, y) {
+  return x + y
+}
+```
+```js
+7
+```
+
+---
+
+_(five minutes later...)_
 
 ---
 
@@ -482,13 +579,26 @@ If I can't understand it, **it's not good enough**.
 
 ---
 
-We need a culture within our team that says:
-
-"if I put effort into making code
-communicate best the ideas, that uses proven concepts, would that
-make me better at my job?"
+"if I put effort into making code **communicate best the ideas**, that uses 
+proven concepts, would that make me **better at my job**?"
 
 We have to make our team/boss believe that.
 
+```notes
+deia que necessitem una cultura que pensi aixi
+```
 ---
 
+Code quality is directly related to our ability to do our jobs.
+
+The success of the team is **directly related to the code quality**.
+
+---
+
+# Fight the "good enough"
+
+---
+
+he sobreviscut a 5 dies, 8 hores per dia, de brainfuck a Düsseldorf.
+
+ask me anything.
