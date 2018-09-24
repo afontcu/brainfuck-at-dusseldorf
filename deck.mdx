@@ -69,6 +69,239 @@ _password: incorrecta_
 
 ---
 
+<Image src="images/trivago-office.png" size="contain" />
+
+---
+
+<Image src="images/trivago-instagram.png" size="contain" />
+
+---
+
+<Image src="images/breakfast.png" size="contain" />
+
+---
+
+<Image src="images/beer.png" size="contain" />
+
+---
+
+# Brainfuckkkkkkkk
+
+---
+
 <Image src="images/brainfuck.webp" />
+
+---
+
+# Dilluns
+
+Deep JS foundations
+
+```notes
+scope i lexical scope
+hoisting
+closures
+modules
+```
+
+---
+
+// Declarations and statements
+```js
+
+c()
+b()
+a()
+
+var a = function() { return 'a' }
+
+var b = () => 'b'
+
+function c() { return 'c' }
+```
+
+---
+
+// Scopes and hoisting
+```js
+
+var x = 1
+
+function foo() {
+  console.log('x is:', x)
+  var x = 2
+}
+
+foo()
+```
+
+```notes
+var x
+function foo() {
+  var x
+  console.log(x)
+}
+
+...i després assigna valors, executa, bla bla.
+
+var declarations hoist and initialize as undefined
+let declarations hoist BUT don't initialize
+```
+
+---
+
+```js
+function foo () {
+  var x = bar()
+  
+  return x
+
+
+  // *****************
+
+  function bar () {
+    //...
+  }
+}
+```
+
+---
+
+// Closures
+```js
+
+function foo () {
+  var bar = 'bar'
+
+  setTimeout(() => console.log(bar), 1000)
+
+  bar = 'bar2'
+}
+
+foo()
+```
+
+---
+
+// Closures
+```js
+
+function foo () {
+  var bar = 'bar'
+
+  setTimeout(() => console.log(bar), 0)
+
+  bar = 'bar2'
+}
+
+foo()
+```
+
+```notes
+Resultat: 'bar2'
+```
+
+---
+
+# Dimarts
+
+JS: The Recent Parts _(also known as ES6)_
+
+```notes
+spread operator
+iterators/generators
+tagged template literals
+```
+
+---
+
+```js
+var amount = 12
+
+var msg = format`blablabla${amount} very blablabla`
+
+function format (strings, ...values) {
+  console.log('strings', strings)
+  console.log('values', values)
+}
+```
+
+---
+
+```jsx
+const Title = styled.h1`
+  font-size: 1.5em;
+  color: ${props => props.primary ? "#FABADA" : "#BADA55"};
+`;
+```
+
+---
+
+# Dimecres
+
+Async JS
+
+---
+
+Callbacks / Thunks
+
+Promises
+
+Generators
+
+Observables
+
+```notes
+callbacks / thunks -> promises -> generators -> observables
+
+
+thunk = a function that's returned by another
+
+function lol() {
+  return function() {
+    console.log('hey ho')
+  }
+}
+```
+
+---
+
+# Dijous
+
+Functional Javascript (I)
+
+---
+
+# Divendres
+
+Faves tendres
+
+---
+
+# Divendres
+
+Functional Javascript (II)
+
+---
+
+# Javascript is ❤️
+
+---
+
+## JS o Python? 
+
+```js
+0.1 + 0.2 = 0.30000000000000004
+```
+
+---
+
+## JS o Python? 
+
+```js
+true + false + true + false = 4
+```
+
+_(disclaimer: aquesta diapositiva no té majúscules)_
 
 ---
