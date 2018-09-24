@@ -10,3 +10,5 @@ it's written in Catalan, and I prepared the talk in ~8 mins.
 
 By the way, slides are available here, because potatoes:
 
+By the way (2), [mdx-deck](https://github.com/jxnblk/mdx-deck/) + [Now](https://zeit.co/now) 
+is PVRE GOLD. Damn this is so easy.
