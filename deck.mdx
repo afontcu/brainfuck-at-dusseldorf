@@ -181,24 +181,8 @@ function foo () {
 foo()
 ```
 
----
-
-// Closures
-```js
-
-function foo () {
-  var bar = 'bar'
-
-  setTimeout(() => console.log(bar), 0)
-
-  bar = 'bar2'
-}
-
-foo()
-```
-
 ```notes
-Resultat: 'bar2'
+'bar2'
 ```
 
 ---
@@ -261,6 +245,28 @@ function lol() {
   return function() {
     console.log('hey ho')
   }
+}
+```
+
+---
+
+# Brainfuckkkkkkkk
+
+---
+
+```js
+for (var i = 0; i < 10; i++) {
+  console.log('The number is ' + i)
+}
+```
+
+---
+
+```js
+for (var i = 0; i < 10; i++) {
+  setTimeout(function () {
+    console.log('The number is ' + i)
+  }, 1000)
 }
 ```
 
