@@ -274,6 +274,30 @@ let declarations hoist BUT don't initialize
 ---
 
 ```js
+var a = 1; 
+function b () { 
+    a = 10; 
+    return; 
+    function a() {} 
+}
+
+b(); 
+console.log(a)
+```
+
+```notes
+a = 1
+
+function a(){} ~= var a = function () {}
+
+a=10 es la variable local, no la global
+
+(si no tinguessim la funcio a(), el valor seria 10)
+```
+
+---
+
+```js
 function foo () {
   var x = bar()
   
