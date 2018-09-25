@@ -140,6 +140,66 @@ export default Invert
 
 ---
 
+---
+
+# Ara una reflexió en serio
+
+---
+
+"yeah, code quality is important, but..."
+
+---
+
+"...this is good enough"
+
+---
+
+# Fight the "good enough"
+
+---
+
+It doesn't matter if it works.
+
+If I can't understand it, **it's not good enough**.
+
+---
+
+"if I put effort into making code **communicate best the ideas**, that uses 
+proven concepts, would that make me **better at my job**?"
+
+We have to make our team/boss believe that.
+
+```notes
+deia que necessitem una cultura que pensi aixi
+```
+---
+
+Code quality is directly related to our ability to do our jobs.
+
+The success of the team is **directly related to the code quality**.
+
+---
+
+què li diem al "good enough?"
+
+---
+
+export default Invert
+
+<Image src="images/good-enough.jpg" size="contain" />
+
+---
+
+# Fight the "good enough"
+
+---
+
+# Brainfuckkkkkkkk
+
+ara, amb un _NaN_% més d'exemples!
+
+---
+
 # Dilluns
 
 Deep JS foundations
@@ -573,6 +633,29 @@ var nums = {
 ---
 
 ```js
+const isOdd = (v) => v % 2 == 1
+const sum = (x,y) => x + y
+const mult = (x,y) => x * y
+const listSum = (list) => list.reduce(sum, 0)
+const listProduct = (list) => list.reduce(mult, 1)
+```
+
+---
+
+```js
+const curry = ...
+const compose = ...
+const pipe = ...
+const binary = ...
+
+const mapObj = ...
+const filterObj = ...
+const reduceObj = ...
+```
+
+---
+
+```js
 pipe(
   flattenObject,
   getSelected,
@@ -607,53 +690,6 @@ true + false + true + false = 2
 
 _(disclaimer: aquesta diapositiva no té majúscules)_
 
----
-
-# Ara una reflexió en serio
-
----
-
-"yeah, code quality is important, but..."
-
----
-
-"...this is good enough"
-
----
-
-# Fight the "good enough"
-
----
-
-It doesn't matter if it works.
-
-If I can't understand it, **it's not good enough**.
-
----
-
-"if I put effort into making code **communicate best the ideas**, that uses 
-proven concepts, would that make me **better at my job**?"
-
-We have to make our team/boss believe that.
-
-```notes
-deia que necessitem una cultura que pensi aixi
-```
----
-
-Code quality is directly related to our ability to do our jobs.
-
-The success of the team is **directly related to the code quality**.
-
----
-
-# Fight the "good enough"
-
----
-
-export default Invert
-
-<Image src="images/good-enough.jpg" size="contain" />
 ---
 
 # 👋
